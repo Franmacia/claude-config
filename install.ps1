@@ -34,6 +34,14 @@ if (Test-Path -LiteralPath $hooksSource) {
     }
 }
 
+# Copiar settings.json
+$settingsSource = Join-Path $source ".claude\settings.json"
+$settingsTarget = Join-Path $target "settings.json"
+if (Test-Path -LiteralPath $settingsSource) {
+    Copy-Item -LiteralPath $settingsSource -Destination $settingsTarget -Force
+    Write-Output "Instalado settings.json"
+}
+
 Write-Output ""
 Write-Output "Instalacion completada en $target"
 Write-Output "Reinicia Claude Code para cargar hooks y skills."

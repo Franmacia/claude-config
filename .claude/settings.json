@@ -1,0 +1,40 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\caveman-activate.js\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\caveman-mode-tracker.js\""
+          },
+          {
+            "type": "command",
+            "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\session-health-monitor.js\""
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "claude-mem@thedotmack": true
+  },
+  "theme": "dark-ansi",
+  "statusLine": {
+    "type": "command",
+    "command": "powershell -ExecutionPolicy Bypass -File \"C:\\Users\\fmaciaal\\.claude\\hooks\\caveman-statusline.ps1\""
+  }
+}

@@ -4,13 +4,9 @@ Este repo contiene la configuración de Claude (hooks, skills, referencias del v
 
 ## Qué incluye
 
-- `.claude/hooks/vault-briefing.ps1` — inyecta contexto del vault en cada SessionStart.
-- `.claude/skills/vault-context/` — skill `/vault-context`.
-- `.claude/skills/vault-graph/` — skill `/vault-graph`.
-- `.claude/skills/vault-health/` — skill `/vault-health`.
-- `.claude/skills/vault-ingest/` — skill `/vault-ingest`.
-- `.claude/skills/vault-links/` — skill `/vault-links`.
-- `.claude/skills/vault-wrapup/` — skill `/vault-wrapup`.
+- `.claude/settings.json` — configuración de hooks y plugins de Claude.
+- `.claude/hooks/` — todos los hooks (caveman, session health, vault-briefing, etc.).
+- `.claude/skills/` — todos los skills (vault-*, caveman, diagnose, etc.).
 - `vault-reference/CLAUDE.md` y `AGENTS.md` — referencias de las instrucciones del vault.
 - `install.ps1` — instala la configuración en `%USERPROFILE%\.claude\`.
 - `requirements.txt` — dependencias Python del second brain.
