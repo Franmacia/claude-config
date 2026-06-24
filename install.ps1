@@ -45,3 +45,4 @@ if (Test-Path -LiteralPath $settingsSource) {
 Write-Output ""
 Write-Output "Instalacion completada en $target"
 Write-Output "Reinicia Claude Code para cargar hooks y skills."
+Write-Output "Ejecuta .\validate-install.ps1 para verificar que todo esta correcto."

@@ -9,6 +9,7 @@ Este repo contiene la configuración de Claude (hooks, skills, referencias del v
 - `.claude/skills/` — todos los skills (vault-*, caveman, diagnose, etc.).
 - `vault-reference/CLAUDE.md` y `AGENTS.md` — referencias de las instrucciones del vault.
 - `install.ps1` — instala la configuración en `%USERPROFILE%\.claude\`.
+- `validate-install.ps1` — verifica que todo esté correctamente instalado.
 - `requirements.txt` — dependencias Python del second brain.
 
 ## Instalación rápida
@@ -33,9 +34,10 @@ pip install -r requirements.txt
 ## Post-instalación
 
 1. Abrir Claude Code en el vault como workspace.
-2. El hook `vault-briefing.ps1` se ejecutará en cada SessionStart.
-3. Usar `/vault-context <tema>` para cargar contexto.
-4. Usar `/vault-wrapup` al cerrar sesiones importantes.
+2. Ejecutar `\.validate-install.ps1` para verificar que todo esté correcto.
+3. El hook `vault-briefing.ps1` se ejecutará en cada SessionStart.
+4. Usar `/vault-context <tema>` para cargar contexto.
+5. Usar `/vault-wrapup` al cerrar sesiones importantes.
 
 ## Personalización
 
