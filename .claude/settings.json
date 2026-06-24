@@ -10,6 +10,10 @@
           {
             "type": "command",
             "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\caveman-activate.js\""
+          },
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"C:\\Users\\fmaciaal\\.claude\\hooks\\vault-briefing.ps1\""
           }
         ]
       }
@@ -19,11 +23,35 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\caveman-mode-tracker.js\""
-          },
+            "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\session-health-monitor.js\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
           {
             "type": "command",
-            "command": "node \"C:\\Users\\fmaciaal\\.claude\\hooks\\session-health-monitor.js\""
+            "command": "powershell -ExecutionPolicy Bypass -File \"C:\\Users\\fmaciaal\\.claude\\hooks\\tabletop-commit-detector.ps1\"",
+            "shell": "powershell",
+            "async": true,
+            "statusMessage": "Detectando commits Tabletop-Magic..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"C:\\Users\\fmaciaal\\.claude\\hooks\\tabletop-vault-update.ps1\"",
+            "shell": "powershell",
+            "asyncRewake": true,
+            "rewakeMessage": "Vault Obsidian desactualizado —",
+            "rewakeSummary": "Commits Tabletop-Magic pendientes en vault"
           }
         ]
       }
